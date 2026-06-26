@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método 90-30 — Reprograma tu Mente y Manifiesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lavanda:#9B7FC4;
+    --lavanda-deep:#7A5FA8;
+    --rosa:#E8B4C8;
+    --durazno:#F4D4B8;
+    --bg:#F8F4FB;
+    --bg-soft:#F1E8F7;
+    --ink:#3D2E52;
+    --ink-soft:#6B5688;
+    --gold:#D4A857;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Quicksand', sans-serif;
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    color:var(--ink);
+  }
+  em{
+    font-style:italic;
+    color:var(--lavanda-deep);
+  }
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  a{text-decoration:none;color:inherit;}
+  .glow-bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(155,127,196,0.18) 0%, transparent 35%),
+      radial-gradient(circle at 85% 25%, rgba(232,180,200,0.2) 0%, transparent 38%),
+      radial-gradient(circle at 30% 80%, rgba(244,212,184,0.18) 0%, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(155,127,196,0.12) 0%, transparent 35%);
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:64px 0 56px;
+    text-align:center;
+  }
+  .emoji-row{
+    font-size:1.4rem;
+    letter-spacing:14px;
+    margin-bottom:28px;
+    opacity:0.9;
+  }
+  .launch-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:linear-gradient(135deg, rgba(155,127,196,0.15), rgba(232,180,200,0.18));
+    border:1px solid rgba(155,127,196,0.3);
+    color:var(--lavanda-deep);
+    font-weight:700;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    padding:8px 20px;
+    border-radius:30px;
+    margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:2.6rem;
+    line-height:1.25;
+    max-width:680px;
+    margin:0 auto 22px;
+  }
+  .hero .lead{
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin:0 auto 38px;
+  }
+  .btn-primary{
+    display:inline-block;
+    background:linear-gradient(135deg, var(--lavanda), var(--lavanda-deep));
+    color:#fff;
+    font-weight:700;
+    font-size:1.05rem;
+    padding:18px 38px;
+    border-radius:50px;
+    box-shadow:0 10px 30px -8px rgba(122,95,168,0.55);
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 14px 34px -8px rgba(122,95,168,0.65);
+  }
+  .price-line{
+    margin-top:20px;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .price-line b{color:var(--lavanda-deep);font-size:1.15rem;}
+
+  /* ===== SECTION GENERIC ===== */
+  .section{
+    padding:70px 0;
+  }
+  .section-card{
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(155,127,196,0.18);
+    border-radius:28px;
+    padding:56px;
+    backdrop-filter:blur(6px);
+  }
+  .eyebrow{
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--lavanda-deep);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .center-head{
+    text-align:center;
+    max-width:600px;
+    margin:0 auto 46px;
+  }
+  .center-head h2{
+    font-size:2.1rem;
+    line-height:1.25;
+  }
+
+  /* PAIN LIST */
+  .pain-list{
+    list-style:none;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .pain-list li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:14px 0;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    border-bottom:1px solid rgba(155,127,196,0.12);
+  }
+  .pain-list li:last-child{border-bottom:none;}
+  .pain-list .bullet{font-size:1.2rem;flex-shrink:0;}
+  .pain-callout{
+    text-align:center;
+    margin-top:36px;
+    font-size:1.15rem;
+    color:var(--ink);
+    font-weight:600;
+  }
+
+  /* WHAT'S INCLUDED */
+  .timeline-banner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    margin-bottom:48px;
+    flex-wrap:wrap;
+  }
+  .timeline-pill{
+    background:linear-gradient(135deg, rgba(155,127,196,0.12), rgba(232,180,200,0.15));
+    border:1px solid rgba(155,127,196,0.25);
+    border-radius:20px;
+    padding:18px 30px;
+    text-align:center;
+  }
+  .timeline-pill .num{
+    font-family:'Playfair Display',serif;
+    font-size:2.2rem;
+    color:var(--lavanda-deep);
+    font-weight:700;
+  }
+  .timeline-pill .lbl{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .timeline-join{font-size:1.6rem;color:var(--rosa);}
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .feature-card{
+    text-align:center;
+    padding:30px 20px;
+    background:rgba(255,255,255,0.6);
+    border-radius:20px;
+    border:1px solid rgba(155,127,196,0.15);
+  }
+  .feature-card .ic{font-size:2.1rem;margin-bottom:14px;display:block;}
+  .feature-card h4{font-size:1.1rem;margin-bottom:8px;}
+  .feature-card p{font-size:0.92rem;color:var(--ink-soft);}
+
+  /* BONUS */
+  .bonus-section{background:var(--bg-soft);}
+  .bonus-value{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .bonus-value b{color:var(--gold);}
+  .bonus-list{
+    display:grid;
+    gap:16px;
+  }
+  .bonus-row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#fff;
+    border-radius:16px;
+    padding:18px 24px;
+    border:1px solid rgba(155,127,196,0.12);
+  }
+  .bonus-num{
+    flex-shrink:0;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--lavanda), var(--rosa));
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-family:'Playfair Display',serif;
+  }
+  .bonus-row h4{font-size:1.02rem;font-weight:600;}
+
+  /* QUOTE */
+  .quote-section{text-align:center;}
+  .quote-mark{font-size:3rem;color:var(--rosa);font-family:'Playfair Display',serif;line-height:1;}
+  .quote-section blockquote{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:var(--ink);
+    max-width:600px;
+    margin:0 auto 20px;
+    line-height:1.5;
+  }
+  .quote-by{
+    font-weight:700;
+    color:var(--lavanda-deep);
+    font-size:0.95rem;
+  }
+
+  /* IDENTIFY */
+  .check-list{
+    list-style:none;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .check-list li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:12px 0;
+    font-size:1.05rem;
+  }
+  .check{
+    flex-shrink:0;
+    color:#fff;
+    background:var(--lavanda);
+    width:24px;height:24px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.8rem;
+    margin-top:2px;
+  }
+
+  /* TESTIMONIOS */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .testi-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(155,127,196,0.15);
+    display:flex;
+    flex-direction:column;
+  }
+  .testi-message{
+    background:linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    padding:24px;
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(155,127,196,0.15);
+  }
+  .testi-text{
+    font-size:0.95rem;
+    line-height:1.5;
+    color:var(--ink);
+    font-family:'Quicksand', sans-serif;
+  }
+  .testi-time{
+    font-size:0.75rem;
+    color:var(--ink-soft);
+    text-align:right;
+    margin-top:14px;
+  }
+  .testi-meta{padding:14px 18px;font-size:0.85rem;color:var(--ink-soft);display:flex;align-items:center;gap:8px;}
+  .testi-meta .star{color:var(--gold);}
+
+  /* GUARANTEE */
+  .guarantee{
+    text-align:center;
+    background:linear-gradient(135deg, rgba(155,127,196,0.1), rgba(244,212,184,0.15));
+    border:1px solid rgba(155,127,196,0.25);
+    border-radius:24px;
+    padding:48px;
+  }
+  .guarantee .ic{font-size:2.6rem;margin-bottom:16px;}
+  .guarantee h3{font-size:1.5rem;margin-bottom:12px;}
+  .guarantee p{max-width:480px;margin:0 auto;color:var(--ink-soft);}
+
+  /* FINAL CTA */
+  .final-cta{
+    text-align:center;
+    background:linear-gradient(160deg, var(--lavanda) 0%, var(--lavanda-deep) 100%);
+    border-radius:32px;
+    padding:64px 40px;
+    color:#fff;
+  }
+  .final-cta h2{color:#fff;font-size:2.1rem;margin-bottom:16px;}
+  .final-cta .value-line{
+    font-size:0.95rem;
+    opacity:0.85;
+    margin-bottom:6px;
+  }
+  .final-cta .price-big{
+    font-family:'Playfair Display',serif;
+    font-size:3.2rem;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .final-cta .price-sub{font-size:0.92rem;opacity:0.85;margin-bottom:30px;}
+  .final-cta .btn-primary{
+    background:#fff;
+    color:var(--lavanda-deep);
+    box-shadow:0 10px 30px -6px rgba(0,0,0,0.25);
+  }
+  .trust-line{
+    margin-top:24px;
+    font-size:0.85rem;
+    opacity:0.85;
+  }
+
+  /* FAQ */
+  .faq-item{
+    border-bottom:1px solid rgba(155,127,196,0.15);
+    padding:20px 0;
+  }
+  .faq-item summary{
+    cursor:pointer;
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+    font-size:1.05rem;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:'✦';
+    color:var(--rosa);
+    font-size:1rem;
+    margin-left:16px;
+    flex-shrink:0;
+  }
+  .faq-item p{
+    margin-top:12px;
+    color:var(--ink-soft);
+  }
+
+  footer{
+    text-align:center;
+    padding:40px 0;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:760px){
+    .hero h1{font-size:2rem;}
+    .section-card{padding:32px 24px;border-radius:20px;}
+    .feature-grid, .testi-grid{grid-template-columns:1fr;}
+    .guarantee{padding:32px 24px;}
+    .final-cta{padding:48px 24px;}
+    .timeline-banner{gap:10px;}
+    .timeline-pill{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="glow-bg"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="emoji-row">🌸 ✨ 🌙 ✨ 🌸</div>
+    <div class="launch-tag">✦ Precio especial de lanzamiento ✦</div>
+    <h1>Deja de visualizar sin resultados.<br>Empieza a <em>reprogramar tu mente de verdad.</em></h1>
+    <p class="lead">El Método 90-30: 90 días de gratitud consciente + 30 días de journal, más 7 bonus, para soltar tus creencias limitantes y manifestar la vida que quieres.</p>
+    <a href="https://pay.hotmart.com/H104988416K" class="btn-primary">✨ ¡Quiero mi Método 90-30!</a>
+    <p class="price-line">Solo <b>$10 USD</b> — pago único, acceso inmediato</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-card">
+      <div class="eyebrow">¿Te sientes así? Esto es para ti.</div>
+      <ul class="pain-list">
+        <li><span class="bullet">🌙</span> Sientes que estás estancada y que el tiempo pasa sin que nada cambie</li>
+        <li><span class="bullet">💭</span> Has intentado cambiar con fuerza de voluntad, pero las mismas creencias te frenan</li>
+        <li><span class="bullet">🌸</span> Empiezas con motivación, pero a los días lo dejas</li>
+        <li><span class="bullet">✨</span> No sabes exactamente qué hacer cada día para reprogramar tu mente</li>
+        <li><span class="bullet">💫</span> Quieres resultados reales, no solo teoría sobre manifestación</li>
+      </ul>
+      <p class="pain-callout">💗 Lo que te falta no es deseo — es un método claro, día por día.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <div class="eyebrow">Lo que recibes</div>
+      <h2>Tu Método 90-30 completo</h2>
+    </div>
+
+    <div class="timeline-banner">
+      <div class="timeline-pill">
+        <div class="num">90</div>
+        <div class="lbl">días de gratitud consciente</div>
+      </div>
+      <div class="timeline-join">+</div>
+      <div class="timeline-pill">
+        <div class="num">30</div>
+        <div class="lbl">días de journal manifestador</div>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="ic">📖</span>
+        <h4>Diario de Gratitud · 90 días</h4>
+        <p>Eleva tu vibración y reentrena tu mente para notar lo bueno cada día.</p>
+      </div>
+      <div class="feature-card">
+        <span class="ic">🌙</span>
+        <h4>Diario Manifestador · 30 días</h4>
+        <p>Escribe tus intenciones con claridad y suelta las creencias que te frenan.</p>
+      </div>
+      <div class="feature-card">
+        <span class="ic">🎧</span>
+        <h4>Meditaciones guiadas</h4>
+        <p>Dos audios para llevar tu mente a un estado de calma y apertura profunda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="section bonus-section">
+  <div class="wrap">
+    <div class="center-head">
+      <div class="eyebrow">Incluido gratis</div>
+      <h2>Tus 7 Bonus Exclusivos</h2>
+    </div>
+    <p class="bonus-value">Valorados en más de <b>$70</b> — tuyos hoy sin costo extra</p>
+
+    <div class="bonus-list">
+      <div class="bonus-row">
+        <div class="bonus-num">1</div>
+        <h4>Descubre tu misión de vida</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">2</div>
+        <h4>Cada día cuenta — 31 días de manifestación consciente</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">3</div>
+        <h4>7 métodos de manifestación</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">4</div>
+        <h4>60 afirmaciones cuánticas</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">5</div>
+        <h4>Meditación guiada I</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">6</div>
+        <h4>Meditación guiada II</h4>
+      </div>
+      <div class="bonus-row">
+        <div class="bonus-num">7</div>
+        <h4>Acceso a comunidad privada de acompañamiento</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="section quote-section">
+  <div class="wrap">
+    <div class="quote-mark">"</div>
+    <blockquote>Yo pasé por el estancamiento, cuando sentía que ya no podía más. Reprogramé mi mente y hoy vivo de lo que amo. Por eso enseño este método: porque sé que funciona.</blockquote>
+    <p class="quote-by">— Mónica Benavente, Coach Ontológica · creadora del Método 90-30</p>
+  </div>
+</section>
+
+<!-- IDENTIFY -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-card">
+      <div class="eyebrow">¿Te identificas?</div>
+      <ul class="check-list">
+        <li><span class="check">✓</span> Quieres dejar de visualizar en teoría y empezar a ver resultados reales</li>
+        <li><span class="check">✓</span> Necesitas una rutina diaria clara y fácil de seguir</li>
+        <li><span class="check">✓</span> Deseas soltar creencias limitantes y reprogramar tu mente</li>
+        <li><span class="check">✓</span> Crees que mereces vivir una vida plena y en cambio constante</li>
+        <li><span class="check">✓</span> Quieres empezar hoy mismo, sin esperar más</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-head">
+      <div class="eyebrow">Lo que dicen quienes ya lo viven</div>
+      <h2>Historias reales de transformación</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-message">
+          <p class="testi-text">"Me encantó el contenido muchas gracias 🌸 Las técnicas de manifestación me están ayudando mucho y el journal con las afirmaciones diarias mucho más. Estoy recibiendo sincronicidades y me siento demasiado feliz porque el otro mes me cambian de área en mi trabajo y lo estuve agradeciendo como si ya estuviera pasando !!!"</p>
+          <div class="testi-time">9:42 a.m.</div>
+        </div>
+        <div class="testi-meta"><span class="star">★★★★★</span> Clienta del Método 90-30</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-message">
+          <p class="testi-text">"MONICA holaaaa!!! Estoy usando las técnicas de manifestación que están en el método waoooo increíble lo que me esta pasando !! Gracias a la gratitud y enfocándome en lo que deseo acabo de manifestar cambiarme de departamento y me mudo en unos días y estoy demasiado emocionada !!! 😍 gracias gracias gracias ."</p>
+          <div class="testi-time">6:17 p.m.</div>
+        </div>
+        <div class="testi-meta"><span class="star">★★★★★</span> Clienta del Método 90-30</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-message">
+          <p class="testi-text">"Gracias moniii!!!! estoy usando el diario de gratitud y el diario manifestador todos los días con intención . Me cambió la vida ... me siento más enfocada. Estoy empezando a manifestar cosas pequeñas como rosas que quería e una cartera que me lo regalaron 😍 pero sé que esto es un proceso y me encanta mil gracias."</p>
+          <div class="testi-time">5:25 p.m.</div>
+        </div>
+        <div class="testi-meta"><span class="star">★★★★★</span> Clienta del Método 90-30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="section">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="ic">🛡️</div>
+      <h3>Garantía de 7 días</h3>
+      <p>Si por cualquier razón sientes que el Método 90-30 no es para ti, te devolvemos tu dinero completo sin preguntas dentro de los primeros 7 días. Tu inversión está 100% protegida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="final-cta">
+      <div class="emoji-row" style="opacity:0.7;">✨ 🌙 ✨</div>
+      <h2>Empieza tu transformación <em style="color:#fff;">hoy mismo.</em></h2>
+      <p class="value-line">Valor real: $70+ USD</p>
+      <div class="price-big">$10</div>
+      <p class="price-sub">USD — pago único, tuyo para siempre</p>
+      <a href="https://pay.hotmart.com/H104988416K" class="btn-primary">¡Sí, quiero mi Método 90-30! ✨</a>
+      <p class="trust-line">🔒 Pago 100% seguro · Acceso inmediato · Garantía 7 días</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="wrap" style="max-width:700px;">
+    <div class="center-head">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2 style="font-size:1.8rem;">Resolvemos tus dudas</h2>
+    </div>
+
+    <details class="faq-item" open>
+      <summary>¿Cómo recibo el Método 90-30 después de comprar?</summary>
+      <p>De forma inmediata. Hotmart te enviará un correo con acceso a tu área de miembros donde podrás descargar todo al instante.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Necesito experiencia previa en coaching o manifestación?</summary>
+      <p>Para nada. El método está diseñado para acompañarte desde cero, paso a paso, seas principiante o ya tengas experiencia previa.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿El acceso es para siempre?</summary>
+      <p>Sí, el acceso es de por vida. También recibirás futuras actualizaciones sin costo adicional.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Puedo imprimir los diarios?</summary>
+      <p>¡Claro! Los archivos están optimizados para imprimir en casa o en imprenta, o para usarlos digitalmente en tablet o iPad.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Es seguro el pago?</summary>
+      <p>Totalmente. Hotmart es la plataforma líder en productos digitales. Puedes pagar con tarjeta de crédito, débito, PayPal o el método disponible en tu país.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  © Mónica Benavente · Coach Ontológica · Powered by Hotmart
+</footer>
+
+</body>
+</html>
